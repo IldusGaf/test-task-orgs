@@ -1,0 +1,32 @@
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.App header {
+  flex-grow: 0;
+}
+.App main {
+  flex: 1 0;
+  height: 80%;
+}
+
+.navlink {
+  color: inherit;
+  display: flex;
+  height: 100%;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.navlink:hover,
+.navlinkActive {
+  opacity: 1;
+}
+
+.navlinkActive {
+  color: inherit;
+  text-decoration: underline;
+}
