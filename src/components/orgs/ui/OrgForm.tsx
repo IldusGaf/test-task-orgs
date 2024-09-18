@@ -26,7 +26,7 @@ export const OrgForm = <T extends FieldValues>() => {
         name={"exp" as Path<T>}
         control={control}
         rules={{ required: true }}
-        render={({ field: { onChange, onBlur, ref, ...field } }) => (
+        render={({ field: { onChange, ref, ...field } }) => (
           <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="ru">
             <DateTimePicker
               inputRef={ref}

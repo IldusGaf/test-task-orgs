@@ -1,6 +1,6 @@
 import { flow, Instance, types } from "mobx-state-tree";
 import { fetcher } from "../api/orgApi";
-import { IOrgAdd, IOrgDelete, IOrgResponse } from "../types/OrgTypes";
+import { IOrgAdd, IOrgDelete } from "../types/OrgTypes";
 import { DELETE, POST } from "../../../../shared/const/common";
 
 const RecLimit = types.model("RecLimit", {
@@ -83,4 +83,3 @@ export const OrgStore = types
   });
 
 export type OrgStoreType = Instance<typeof OrgStore>;
-let orgStore: OrgStoreType;

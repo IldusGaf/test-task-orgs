@@ -7,7 +7,7 @@ export interface IFetchOptions {
 
 export const fetcher = async ({ body, method }: IFetchOptions) => {
   try {
-    let response = await fetch(
+    const response = await fetch(
       `${process.env.REACT_APP_BAKEND_HOST}/${process.env.REACT_APP_API_TOKEN}/orgs/`,
       body || method
         ? {
@@ -25,7 +25,11 @@ export const fetcher = async ({ body, method }: IFetchOptions) => {
     } else {
       throw new Error(json.status);
     }
-  } catch (e: any) {
-    throw e.message;
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      throw e.message;
+    } else {
+      throw "An unknown error occurred";
+    }
   }
 };
