@@ -24,7 +24,7 @@ export interface IOrgForm extends Omit<IOrg, "_id" | "recordingLimit" | "exp"> {
   exp: number | null;
 }
 
-export interface IOrgAdd extends Pick<IOrg, "name" | "exp"> {}
+export type IOrgAdd = Pick<IOrg, "name" | "exp">;
 
 export interface IOrgDelete {
   id: string;
