@@ -2,7 +2,7 @@
   "name": "test-task-orgs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ildusgaf.github.io/test-task-orgs",
+  "homepage": "https://ildusgaf.github.io/test-task-orgs/",
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
